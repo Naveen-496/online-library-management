@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/olm
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver  # Ensure the driver is specified
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect  # Set the PostgreSQL dialect
+    show-sql: true
+    hibernate:
+      format-sql: true
+      ddl-auto: update
+
+
+
+jwt:
+  secret: o2mFsA8PyL8jjE/EKe8PUpWGpgYgwZ49B/lycgdoPTholXokZfnvP373+U1TJA2JixUCWH+95nvaLbJc9paC7A==
+
