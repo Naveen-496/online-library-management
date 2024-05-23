@@ -31,8 +31,9 @@ public class BaseController {
        throw new ApiException("You aren't allowed to perform this operation");
    }
 
-   protected boolean canPerformThisOperation() {
+   protected void canPerformThisOperation() {
         var securityUser = getCurrentUser();
-        return roleToScoreMap.get(securityUser.getRole()) >= 3;
+        if (roleToScoreMap.get(securityUser.getRole()) >= 3 ) return;
+        throw new ApiException("This user is not authorized to perform this operation");
    }
 }
