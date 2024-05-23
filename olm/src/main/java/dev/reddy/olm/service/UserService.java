@@ -1,5 +1,6 @@
 package dev.reddy.olm.service;
 
+import dev.reddy.olm.dto.AdminUserRequest;
 import dev.reddy.olm.entity.Credentials;
 import dev.reddy.olm.entity.User;
 
@@ -11,5 +12,5 @@ public interface UserService {
     Optional<User> findUserByEmail(String email);
     User findByEmail(String email);
     Credentials findCredentialsByUserId(Long userId);
-    User saveAdmin(User user);
+    User saveAdmin(AdminUserRequest userRequest);
 }
